@@ -16,12 +16,12 @@ namespace Not_Kayıt_Sistemi
         {
             InitializeComponent();
         }
-        SqlConnection bgl = new SqlConnection(@"Data Source=MSI\SQLEXPRESS;Initial Catalog=DbNotKayıt;Integrated Security=True;");
+        SqlConnection bgl = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DbNotKayıt;Integrated Security=True;");
 
         private void FrmOgretmenDetay_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'dbNotKayıtDataSet.TBLDERS' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.tBLDERSTableAdapter.Fill(this.dbNotKayıtDataSet.TBLDERS);
+           // TODO: This line of code loads data into the 'dbNotKayıtDataSet1.TBLDERS' table. You can move, or remove it, as needed.
+           this.tBLDERSTableAdapter1.Fill(this.dbNotKayıtDataSet1.TBLDERS);
 
         }
 
@@ -85,7 +85,7 @@ namespace Not_Kayıt_Sistemi
             komut.ExecuteNonQuery();
             bgl.Close();
             MessageBox.Show("Öğrenci Notları Güncellendi");
-            this.tBLDERSTableAdapter.Fill(this.dbNotKayıtDataSet.TBLDERS);
+            this.tBLDERSTableAdapter1.Fill(this.dbNotKayıtDataSet1.TBLDERS);
         }
     }
 }
