@@ -19,7 +19,7 @@ namespace Not_Kayıt_Sistemi
         }
         public string numara;
 
-        SqlConnection bgl =new SqlConnection(@"Data Source=MSI\SQLEXPRESS;Initial Catalog=DbNotKayıt;Integrated Security=True;");
+        SqlConnection bgl =new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DbNotKayıt;Integrated Security=True;");
         private void FrmOgrencıDetay_Load(object sender, EventArgs e)
         {
             LblNumara.Text = numara;
